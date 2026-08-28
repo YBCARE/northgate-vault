@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0a1f44;
+  --color-navy-deep: #071529;
+  --color-accent: #1a5f9e;
+  --color-alert: #c8102e;
+  --color-section: #f4f6f8;
+  --color-body: #2c3e50;
+  --color-line: #dde2e8;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #ffffff; color: #2c3e50; font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif; }
+  button, input, select, textarea { font: inherit; }
+  button, a { -webkit-tap-highlight-color: transparent; }
+  :focus-visible { outline: 2px solid #1a5f9e; outline-offset: 3px; }
+  img { max-width: 100%; }
+}
+
+@layer components {
+  .shell { @apply mx-auto w-full max-w-[1280px] px-6 lg:px-10; }
+  .label-eyebrow { @apply text-xs font-semibold uppercase tracking-[0.08em] text-accent; }
+  .nav-link { @apply text-[15px] font-semibold uppercase tracking-[0.02em]; }
+  .btn-navy { @apply inline-flex items-center justify-center gap-2 rounded-[2px] px-7 py-3.5 text-[13px] font-bold uppercase tracking-[0.05em] transition-colors duration-150 bg-navy text-white hover:bg-navy-deep; }
+  .btn-white { @apply inline-flex items-center justify-center gap-2 rounded-[2px] px-7 py-3.5 text-[13px] font-bold uppercase tracking-[0.05em] transition-colors duration-150 bg-white text-navy hover:bg-section; }
+  .btn-outline-white { @apply inline-flex items-center justify-center gap-2 rounded-[2px] px-7 py-3.5 text-[13px] font-bold uppercase tracking-[0.05em] transition-colors duration-150 border border-white text-white hover:bg-white hover:text-navy; }
+  .btn-outline-navy { @apply inline-flex items-center justify-center gap-2 rounded-[2px] px-7 py-3.5 text-[13px] font-bold uppercase tracking-[0.05em] transition-colors duration-150 border border-navy text-navy hover:bg-navy hover:text-white; }
+  .field-label { @apply mb-1.5 block text-[13px] font-semibold text-navy; }
+  .field {
+    @apply w-full rounded-[2px] border border-line bg-white px-4 py-3 text-[15px] text-body outline-none transition-colors placeholder:text-body/40 focus:border-accent;
+  }
+}
