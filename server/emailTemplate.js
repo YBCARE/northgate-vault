@@ -76,7 +76,7 @@ export function buildStatusEmail({ consignment, items, baseUrl }) {
   const location = formatLocation(city, country) || 'Not yet assigned'
   const headline = statusHeadline(status, ref, city, country)
   const trackUrl = `${baseUrl}/track?ref=${encodeURIComponent(ref)}`
-  const bannerUrl = `${baseUrl}/email/status-banner.png`
+  const bannerUrl = `${baseUrl}/email/northgate-email-banner.jpg`
 
   const detailRows = [
     detailRow('Reference Number', ref),
@@ -132,7 +132,7 @@ ${preheader(headline)}
         <!-- Illustrated banner -->
         <tr>
           <td>
-            <img src="${bannerUrl}" width="600" height="180" alt="Northgate Vault" style="display:block;width:100%;height:auto;max-width:600px;" />
+            <img src="${bannerUrl}" width="600" height="200" alt="Northgate Vault" style="display:block;width:100%;height:auto;max-width:600px;" />
           </td>
         </tr>
 
