@@ -26,7 +26,8 @@ const items = [
 
 for (const status of STATUSES) {
   const consignment = { ...baseConsignment, current_status: status }
-  const { subject, html } = buildStatusEmail({ consignment, items, baseUrl: 'http://localhost:4100' })
+  const baseUrl = process.env.PREVIEW_BASE_URL || 'http://localhost:4100'
+  const { subject, html } = buildStatusEmail({ consignment, items, baseUrl })
   const file = path.join(outDir, `${status}.html`)
   writeFileSync(file, html, 'utf8')
   console.log(`${status} -> ${file}`)

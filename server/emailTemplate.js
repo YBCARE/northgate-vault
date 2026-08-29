@@ -59,6 +59,19 @@ function clean_quantity(value) {
   return typeof value === 'string' ? value.trim() : ''
 }
 
+// Each status gets the illustration that actually depicts its stage, so a
+// client never sees, say, a doorstep handover on a "collection scheduled"
+// notice. Falls back to the transit scene for anything unmapped.
+const STATUS_BANNERS = {
+  collection_scheduled: { file: 'banner-collection.jpg', alt: 'A Northgate Vault courier loading a sealed case into a secure transport vehicle' },
+  collected_verified: { file: 'banner-collection.jpg', alt: 'A Northgate Vault courier loading a sealed case into a secure transport vehicle' },
+  in_transit: { file: 'banner-transit.jpg', alt: 'A Northgate Vault secure transport vehicle travelling through a city' },
+  in_custody: { file: 'banner-custody.jpg', alt: 'Sealed cases being screened inside a Northgate Vault facility' },
+  released: { file: 'banner-released.jpg', alt: 'A Northgate Vault courier handing a sealed case to an authorised recipient' },
+}
+
+const DEFAULT_BANNER = STATUS_BANNERS.in_transit
+
 export function buildStatusEmail({ consignment, items, baseUrl }) {
   const {
     reference_number: ref,
@@ -76,7 +89,8 @@ export function buildStatusEmail({ consignment, items, baseUrl }) {
   const location = formatLocation(city, country) || 'Not yet assigned'
   const headline = statusHeadline(status, ref, city, country)
   const trackUrl = `${baseUrl}/track?ref=${encodeURIComponent(ref)}`
-  const bannerUrl = `${baseUrl}/email/northgate-email-banner.jpg`
+  const banner = STATUS_BANNERS[status] || DEFAULT_BANNER
+  const bannerUrl = `${baseUrl}/email/${banner.file}`
 
   const detailRows = [
     detailRow('Reference Number', ref),
@@ -132,7 +146,7 @@ ${preheader(headline)}
         <!-- Illustrated banner -->
         <tr>
           <td>
-            <img src="${bannerUrl}" width="600" height="200" alt="Northgate Vault" style="display:block;width:100%;height:auto;max-width:600px;" />
+            <img src="${bannerUrl}" width="600" height="200" alt="${escapeHtml(banner.alt)}" style="display:block;width:100%;height:auto;max-width:600px;" />
           </td>
         </tr>
 
