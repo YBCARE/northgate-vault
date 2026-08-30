@@ -50,13 +50,24 @@ function itemSummaryRows(items) {
   return [...counts.entries()].map(([label, quantities]) => `
     <tr>
       <td style="padding:8px 0;border-bottom:1px solid ${BORDER};font-size:14px;color:${NAVY};font-weight:600;">${escapeHtml(label)}</td>
-      <td style="padding:8px 0;border-bottom:1px solid ${BORDER};font-size:14px;color:${BODY_TEXT};text-align:right;">${escapeHtml(quantities.join(', ') || '—')}</td>
+      <td style="padding:8px 0;border-bottom:1px solid ${BORDER};font-size:14px;color:${BODY_TEXT};text-align:right;">${escapeHtml(quantities.join(', '))}</td>
     </tr>
   `).join('')
 }
 
 function clean_quantity(value) {
   return typeof value === 'string' ? value.trim() : ''
+}
+
+// Fixes "john" -> "John" and "JANE" -> "Jane" for a greeting typed in all
+// lower- or all upper-case. Mixed-case words (e.g. "McDonald") are left
+// untouched rather than mangled, since they're already deliberately cased.
+function capitalizeWords(value) {
+  return String(value ?? '').replace(/\S+/g, (word) => {
+    const isShouting = word.length > 1 && word === word.toUpperCase() && word !== word.toLowerCase()
+    const rest = isShouting ? word.slice(1).toLowerCase() : word.slice(1)
+    return word.charAt(0).toUpperCase() + rest
+  })
 }
 
 // Each status gets the illustration that actually depicts its stage, so a
@@ -160,7 +171,7 @@ ${preheader(headline)}
         <!-- Greeting + status sentence -->
         <tr>
           <td class="px-24" style="padding:32px 40px 8px;">
-            <p style="margin:0 0 16px;font-size:15px;color:${BODY_TEXT};">Dear ${escapeHtml(clientName)},</p>
+            <p style="margin:0 0 16px;font-size:15px;color:${BODY_TEXT};">Dear ${escapeHtml(capitalizeWords(clientName))},</p>
             <p class="headline" style="margin:0;font-size:22px;line-height:30px;font-weight:700;color:${NAVY};">${escapeHtml(headline)}</p>
           </td>
         </tr>
