@@ -74,11 +74,11 @@ function capitalizeWords(value) {
 // client never sees, say, a doorstep handover on a "collection scheduled"
 // notice. Falls back to the transit scene for anything unmapped.
 const STATUS_BANNERS = {
-  collection_scheduled: { file: 'banner-collection.jpg', alt: 'A Northgate Vault courier loading a sealed case into a secure transport vehicle' },
-  collected_verified: { file: 'banner-collection.jpg', alt: 'A Northgate Vault courier loading a sealed case into a secure transport vehicle' },
-  in_transit: { file: 'banner-transit.jpg', alt: 'A Northgate Vault secure transport vehicle travelling through a city' },
-  in_custody: { file: 'banner-custody.jpg', alt: 'Sealed cases being screened inside a Northgate Vault facility' },
-  released: { file: 'banner-released.jpg', alt: 'A Northgate Vault courier handing a sealed case to an authorised recipient' },
+  collection_scheduled: { file: 'banner-collection.gif', alt: 'A Northgate Vault courier loading a sealed case into a secure transport vehicle' },
+  collected_verified: { file: 'banner-collection.gif', alt: 'A Northgate Vault courier loading a sealed case into a secure transport vehicle' },
+  in_transit: { file: 'banner-transit.gif', alt: 'A Northgate Vault secure transport vehicle travelling through a city' },
+  in_custody: { file: 'banner-custody.gif', alt: 'Sealed cases being screened inside a Northgate Vault facility' },
+  released: { file: 'banner-released.gif', alt: 'A Northgate Vault courier handing a sealed case to an authorised recipient' },
 }
 
 const DEFAULT_BANNER = STATUS_BANNERS.in_transit
