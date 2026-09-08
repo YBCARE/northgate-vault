@@ -50,7 +50,7 @@ export const policies = [
   {
     slug: 'client-confidentiality-standards',
     name: 'Client Confidentiality Standards',
-    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
+    image: 'https://images.pexels.com/photos/8371715/pexels-photo-8371715.jpeg?auto=compress&cs=tinysrgb&w=800',
     summary: 'Sets the standard for how client identity, engagement details, and asset information are protected internally and externally.',
     body: [
       'The existence, scope, and details of a client engagement are treated as confidential by default. Personnel do not disclose that a relationship exists with a given client, nor any details of an engagement, to anyone without a direct operational need to know — including, in many cases, other Northgate Vault personnel outside the engagement.',

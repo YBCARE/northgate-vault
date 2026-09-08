@@ -3,7 +3,7 @@ export const insights = [
     slug: 'what-chain-of-custody-actually-means',
     title: 'What Chain of Custody Actually Means',
     excerpt: 'The term gets used loosely. Here is what a defensible chain of custody actually requires, step by step.',
-    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
+    image: 'https://images.pexels.com/photos/12234106/pexels-photo-12234106.jpeg?auto=compress&cs=tinysrgb&w=800',
     body: [
       { type: 'p', text: '"Chain of custody" is one of the most frequently used phrases in secure logistics, and one of the most loosely applied. Vendors attach it to services that amount to little more than a delivery receipt and a tracking number. A genuine chain of custody is a stricter concept: an unbroken, documented record of every person who has held an asset, every location it has passed through, and every point at which responsibility for it changed hands. If any link in that record is missing, the chain is broken, and the custody claim collapses with it.' },
       { type: 'h2', text: 'The three properties a real chain of custody needs' },
@@ -55,7 +55,7 @@ export const insights = [
     slug: 'insurance-and-liability-in-secure-transport',
     title: 'Insurance and Liability in Secure Transport',
     excerpt: 'Coverage terms in secure transport are rarely as simple as "fully insured." Here is what to actually check.',
-    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
+    image: 'https://images.pexels.com/photos/8470801/pexels-photo-8470801.jpeg?auto=compress&cs=tinysrgb&w=800',
     body: [
       { type: 'p', text: 'Every secure transport provider says its shipments are insured. That statement, on its own, tells a client almost nothing useful. Insurance in this industry varies enormously in scope, in the conditions attached to a claim, and in who is actually liable when something goes wrong. Understanding those distinctions before an engagement begins is more useful than any assurance offered afterward.' },
       { type: 'h2', text: 'Declared value versus actual value' },
@@ -87,7 +87,7 @@ export const insights = [
     slug: 'why-discretion-is-an-operational-requirement',
     title: 'Why Discretion Is an Operational Requirement, Not a Courtesy',
     excerpt: 'Discretion in secure custody is not about politeness. It is a control that directly reduces risk to the asset.',
-    image: 'https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=800&q=80',
+    image: 'https://images.pexels.com/photos/8382236/pexels-photo-8382236.jpeg?auto=compress&cs=tinysrgb&w=800',
     body: [
       { type: 'p', text: 'Discretion is often described as a service quality — the kind of thing that makes a client feel well treated, alongside a polite driver or a tidy vehicle. That framing understates what discretion actually does. In secure custody and transport, discretion is a control, in the same category as a locked vault or a verified access list. Its function is to reduce the number of people who know that a valuable asset exists, where it is, and when it will move — because that information, in the wrong hands, is the single largest risk factor in the entire engagement.' },
       { type: 'h2', text: 'Information is the actual attack surface' },
@@ -112,7 +112,7 @@ export const insights = [
     slug: 'document-custody-for-legal-practices',
     title: 'Document Custody for Legal Practices',
     excerpt: 'Wills, evidence, and case-critical records carry a different custody burden than physical valuables. Here is what law firms should look for.',
-    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
+    image: 'https://images.pexels.com/photos/1370294/pexels-photo-1370294.jpeg?auto=compress&cs=tinysrgb&w=800',
     body: [
       { type: 'p', text: 'Legal document custody looks straightforward from the outside — store paper securely, hand it back when asked — but the requirements are more particular than they first appear. The value of a legal document is almost never in the paper itself. It is in the document\'s evidentiary integrity: the ability to prove, later, that it has not been altered, misplaced, or accessed by anyone without authority to do so. Custody arrangements that don\'t protect that integrity are not actually solving the problem a law firm has.' },
       { type: 'h2', text: 'What makes legal documents different from other valuables' },

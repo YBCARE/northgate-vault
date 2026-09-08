@@ -1,4 +1,5 @@
 import truckRearImage from '../assets/how-it-works-truck-rear.jpg'
+import vaultStorageImage from '../assets/how-it-works-vault-storage.png'
 
 export const stages = [
   {
@@ -12,7 +13,7 @@ export const stages = [
     number: '02',
     title: 'Collection & Verification',
     text: 'At collection, the asset is inspected, counted, and its condition recorded before it enters our custody. Two-person verification confirms what is being received against what was declared, and any discrepancy is flagged and resolved before the item moves.',
-    image: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&q=80',
     docs: ['Collection receipt with itemized condition record', 'Two-person verification signatures', 'Time-stamped custody transfer log'],
   },
   {
@@ -26,7 +27,7 @@ export const stages = [
     number: '04',
     title: 'Custody & Storage',
     text: 'Assets held in storage sit behind layered physical security and access controls limited to a pre-approved list. Every inspection, audit, or partial release is logged against that list, so the custody record stays complete for the full duration of the engagement.',
-    image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&q=80',
+    image: vaultStorageImage,
     docs: ['Custody certificate confirming receipt into storage', 'Access authorization list', 'Periodic condition and audit reports'],
   },
   {

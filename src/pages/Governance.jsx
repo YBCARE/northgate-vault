@@ -5,7 +5,7 @@ import Modal from '../components/Modal.jsx'
 import DualCtaBlock from '../components/DualCtaBlock.jsx'
 import { CloseIcon } from '../components/Icons.jsx'
 import { policies } from '../data/policies.js'
-import governanceImage from '../assets/governance-contract-signing.jpg'
+import governanceImage from '../assets/governance-boardroom.jpg'
 
 function PolicyModal({ policy, onClose }) {
   return (
@@ -38,7 +38,7 @@ export default function Governance() {
         title="Governance & Compliance"
         subtitle="Northgate Vault operates under formal policies governing conduct, data handling, and regulatory compliance across every jurisdiction in which we operate."
         backgroundImage={governanceImage}
-        backgroundAlt="Contract document being reviewed and signed"
+        backgroundAlt="An empty formal boardroom used for governance and compliance meetings"
       />
 
       <section className="bg-white py-20 lg:py-24">
