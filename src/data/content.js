@@ -17,7 +17,7 @@ export const industries = [
 
 export const regions = [
   'North America', 'United Kingdom', 'European Union', 'United Arab Emirates',
-  'Singapore', 'Hong Kong', 'South Africa', 'Nigeria', 'Switzerland', 'Japan',
+  'Singapore', 'Hong Kong', 'South Africa', 'Switzerland', 'Japan',
 ]
 
 export const stats = [
